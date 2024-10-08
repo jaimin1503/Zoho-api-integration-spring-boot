@@ -8,6 +8,7 @@ export default function Home() {
 
     axios.get("http://localhost:9090/zoho/auth").then((response) => {
       console.log(response.data);
+      window.location.href = response.data;
     });
   };
 

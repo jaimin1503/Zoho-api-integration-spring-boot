@@ -2,12 +2,8 @@ package com.ecommerce.app.repo;
 
 import com.ecommerce.app.entity.OAuthToken;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
-// Repository for OAuthToken
-
+@Repository
 public interface OAuthTokenRepository extends JpaRepository<OAuthToken, Long> {
-    Optional<OAuthToken> findTopByOrderByIdDesc(); // To get the latest token
 }
-

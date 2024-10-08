@@ -25,10 +25,10 @@ public class ZohoOAuthController {
         String authRedirectUrl = AUTH_URL + "?scope=" + SCOPE +
                 "&client_id=" + CLIENT_ID +
                 "&response_type=code" +
-                "&access_type=online" +
+                "&access_type=offline" +
                 "&redirect_uri=" + REDIRECT_URI +
                 "&prompt=consent";
 
-        return "redirect:" + authRedirectUrl;
+        return authRedirectUrl;
     }
 }
